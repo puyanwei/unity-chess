@@ -1,42 +1,45 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+
 public class Movement : MonoBehaviour
 
 {
 
-    public Color hoverColor;
-    private Renderer rend;
-    private Color startColor;
-    
+    public GameObject pawn;
+    Vector3 targetPosition;
+
+
+
 
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
-        Debug.Log("you hoverd over the pawn!");
 
-     }
+        targetPosition = transform.position;
+
+    }
 
 
     private void Update()
     {
-        
-    }
 
-    void OnMouseOver()
-    {
-        rend.material.color = hoverColor;
-        Debug.Log("you hoverd over the pawn!");
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-    void OnMouseExit()
-    {
-        rend.material.color = startColor;
-        Debug.Log("you left over the pawn!");
-    }
+            if (Physics.Raycast(ray, out hit))
+            {
+                targetPosition = hit.point;
+                pawn.transform.position = targetPosition;
+            }
+        }
 
+
+
+    }
 
 
 
