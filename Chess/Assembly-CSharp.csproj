@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\ColourHover.cs" />
+    <Compile Include="Assets\Scripts\ChessGrid.cs" />
+    <Compile Include="Assets\Scripts\PieceHover.cs" />
+    <Compile Include="Assets\Scripts\PieceMovement.cs" />
+    <Compile Include="Assets\Scripts\GameObjectIdentifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
