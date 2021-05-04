@@ -10,7 +10,7 @@ public class PawnMovement : MonoBehaviour
     public GameObject piece;
     public GameObject square;
     private Vector3 movement;
-
+    public GameObject kill;
 
     void Start()
     {
@@ -31,6 +31,15 @@ public class PawnMovement : MonoBehaviour
                 
             }
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == kill.name)
+        {
+            GameObject.Destroy(piece);
+            
+        }
+        
     }
 
 }

@@ -16,7 +16,7 @@ public class GameObjectIdentifier : MonoBehaviour
         {
                         
             mouseOverObject = hit.transform.position;
-            Debug.Log(mouseOverObject);
+           
         }
     }
 }
