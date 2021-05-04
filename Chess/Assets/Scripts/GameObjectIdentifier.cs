@@ -8,12 +8,13 @@ public class GameObjectIdentifier : MonoBehaviour
     RaycastHit hit;  
     private object mouseOverObject;
 
+
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            
+                        
             mouseOverObject = hit.transform.position;
             Debug.Log(mouseOverObject);
         }

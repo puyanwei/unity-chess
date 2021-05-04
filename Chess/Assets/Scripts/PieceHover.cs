@@ -13,19 +13,19 @@ public class PieceHover : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
-        Debug.Log("you hoverd over the pawn!");
+        
 
     }
 
     void OnMouseOver()
     {
         rend.material.color = hoverColor;
-        Debug.Log("you hoverd over the pawn!");
+        
     }
 
     void OnMouseExit()
     {
         rend.material.color = startColor;
-        Debug.Log("you left over the pawn!");
+        
     }
 }

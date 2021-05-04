@@ -6,28 +6,25 @@ public class PieceMovement : MonoBehaviour
 {
     Ray ray;
     RaycastHit hit;
-    public GameObject piece;
 
-    void FixedUpdate()
+    public GameObject piece;
+    public GameObject square;
+   
+
+    void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
         {
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.name == piece.name) 
-                {
-                    return;
-                }
-                else
-                {
-                    transform.position = hit.transform.position;
-                }
+            if (hit.transform.name != piece.name)
+            {          
+                transform.position = hit.transform.position;
+                Debug.Log(hit.transform.name);
             }
         }
-
-
     }
 
+
 }
+
