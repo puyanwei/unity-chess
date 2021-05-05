@@ -11,27 +11,60 @@ public class PawnMovement : MonoBehaviour
     public GameObject square;
     private Vector3 movement;
     public GameObject kill;
+    public GameObject shadow;
+    public GameObject[] shadows;
+    private Vector3 sMovement;
 
     void Start()
     {
-        movement = new Vector3(0, 0, 1);
+        movement = new Vector3(0, 0, 2);
+        
+
+
     }
 
     void Update()
     {
+        shadows = GameObject.FindGameObjectsWithTag("shadow");
+
+
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            sMovement = movement + new Vector3(0, 1, 0);
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
+
+        if (shadows.Length == 0)
         {
-            if (hit.transform.name != piece.name)
-            {
+            shadow.transform.position = sMovement;
+            Debug.Log("No game objects are tagged with 'shadow'");
+            Instantiate(shadow, sMovement, piece.transform.rotation);
 
-                piece.transform.position = movement;
-                movement += new Vector3(0,0,1);
-                
-            }
         }
-    }
+        foreach (GameObject shadow in shadows)
+        {
+            Destroy(shadow);
+        }
+
+
+
+
+
+
+
+
+            if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.name != piece.name)
+                {
+
+                    piece.transform.position = movement;
+                    movement += new Vector3(0, 0, 1);
+                    
+                
+                       
+
+                }
+            }
+        }    
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == kill.name)
