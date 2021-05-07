@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &441045673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441045675}
+  - component: {fileID: 441045674}
+  - component: {fileID: 441045676}
+  m_Layer: 0
+  m_Name: BoardController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &441045674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441045673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d91929d357d9115449bda33c518c8e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squarePrefab: {fileID: 7994451427936772267, guid: fd22b88497a2c204e80805a64c6c8408, type: 3}
+  spawnPoint: {fileID: 491317310}
+  whiteMat: {fileID: 2100000, guid: a0a14882246772447b6637da7e813150, type: 2}
+  darkMat: {fileID: 2100000, guid: 462a21478c670934baaae76d0b0b6bad, type: 2}
+  xDim: 8
+  yDim: 8
+--- !u!4 &441045675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441045673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.288391, y: 9.064276, z: 2.4750738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441045676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441045673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fa9c3629684434fb2550d48c043e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecePrefab: {fileID: 296864922360553300, guid: 6df03306e50971e4fa7140c970e07511, type: 3}
+  xDim: 8
+  yDim: 8
 --- !u!1 &491317309
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491317310}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BoardSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491317309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77877647, y: 0.32, z: 13.436057}
+  m_LocalPosition: {x: 0.77877647, y: 0.32, z: 2.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -259,7 +324,6 @@ GameObject:
   - component: {fileID: 1571771183}
   - component: {fileID: 1571771182}
   - component: {fileID: 1571771181}
-  - component: {fileID: 1571771186}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -357,22 +421,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1571771186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571771180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91929d357d9115449bda33c518c8e71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  squarePrefab: {fileID: 7994451427936772268, guid: fd22b88497a2c204e80805a64c6c8408, type: 3}
-  spawnPoint: {fileID: 491317310}
-  timeBetweenSpawns: 0.5
-  cloneCount: 0
 --- !u!1 &1589104677
 GameObject:
   m_ObjectHideFlags: 0

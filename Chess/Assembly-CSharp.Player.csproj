@@ -63,9 +63,10 @@
     <Compile Include="Assets\Scripts\3dChess\SquareSpawner.cs" />
     <Compile Include="Assets\Scripts\3dChess\Movement.cs" />
     <Compile Include="Assets\Scripts\3dChess\ColourHover.cs" />
+    <Compile Include="Assets\Scripts\ArrayChess\ArraySpawner.cs" />
     <Compile Include="Assets\Scripts\3dChess\PawnMovement.cs" />
     <Compile Include="Assets\Scripts\3dChess\ChessGrid.cs" />
-    <Compile Include="Assets\Scripts\ArrayChess\ArraySpawner.cs" />
+    <Compile Include="Assets\Scripts\ArrayChess\PieceSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
