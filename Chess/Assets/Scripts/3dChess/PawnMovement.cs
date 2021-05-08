@@ -35,7 +35,7 @@ public class PawnMovement : MonoBehaviour
 
         if (isHover)
         {
-            validMoveHighlight(allowedMovement)
+            validMoveHighlight(allowedMovement);
         }
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
