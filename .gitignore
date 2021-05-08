@@ -1,4 +1,30 @@
-./vscode
-.gitignore
-!Chess/Assets/
-!Chess/ProjectSettings/
+###
+# Unity folders and files
+###
+Chess/[Aa]ssets/AssetStoreTools*
+Chess/[Bb]uild/
+Chess/[Ll]ibrary/
+Chess/[Ll]ocal[Cc]ache/
+Chess/[Oo]bj/
+Chess/[Tt]emp/
+Chess/[Uu]nityGenerated/
+# file on crash reports
+Chess/sysinfo.txt
+# Unity3D generated meta files
+Chess/*.pidb.meta
+
+###
+# VS/MD solution and project files
+###
+Chess/[Ee]xportedObj/
+Chess/*.booproj
+Chess/*.csproj
+Chess/*.sln
+Chess/*.suo
+Chess/*.svd
+Chess/*.unityproj
+Chess/*.user
+Chess/*.userprefs
+Chess/*.pidb
+.DS_Store
+/.vscode
