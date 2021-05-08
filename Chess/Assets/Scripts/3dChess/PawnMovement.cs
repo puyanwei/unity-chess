@@ -18,9 +18,7 @@ public class PawnMovement : MonoBehaviour
     void Start()
     {
         movement = new Vector3(0, 0, 2);
-        
-
-
+        piece.transform.position = movement;
     }
 
     void Update()
@@ -29,27 +27,6 @@ public class PawnMovement : MonoBehaviour
 
 
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            sMovement = movement + new Vector3(0, 1, 0);
-
-
-        if (shadows.Length == 0)
-        {
-            shadow.transform.position = sMovement;
-            Debug.Log("No game objects are tagged with 'shadow'");
-            Instantiate(shadow, sMovement, piece.transform.rotation);
-
-        }
-        foreach (GameObject shadow in shadows)
-        {
-            Destroy(shadow);
-        }
-
-
-
-
-
-
-
 
             if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
             {
@@ -58,13 +35,11 @@ public class PawnMovement : MonoBehaviour
 
                     piece.transform.position = movement;
                     movement += new Vector3(0, 0, 1);
-                    
-                
-                       
 
                 }
             }
-        }    
+        }   
+ 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == kill.name)
