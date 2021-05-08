@@ -28,3 +28,6 @@ Chess/*.userprefs
 Chess/*.pidb
 .DS_Store
 /.vscode
+
+/Logs
+/Temp

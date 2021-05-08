@@ -27,12 +27,6 @@ public class PawnMovement : MonoBehaviour
         piece.transform.position = movement;
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, piece.transform.position + allowedMovement);
-    }
-
     void Update()
     {
 
@@ -41,13 +35,7 @@ public class PawnMovement : MonoBehaviour
 
         if (isHover)
         {
-           
-            Physics.Raycast(pieceRay, out hit);
-            cubeInFront = hit.transform.name;
-            Debug.Log(cubeInFront);
-
-
-
+            validMoveHighlight(allowedMovement)
         }
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
@@ -89,13 +77,19 @@ public class PawnMovement : MonoBehaviour
     }
 
 
-    void functiontohit(Vector3 position)
+    void validMoveHighlight(Vector3 position)
     {
         ray = Camera.main.ScreenPointToRay(piece.transform.position + position);
         Physics.Raycast(ray, out hit);
-
+        Debug.Log(hit.transform.name);
     }
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, piece.transform.position + allowedMovement);
+    }
+    
 }
 
 
