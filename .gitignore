@@ -1,4 +1,4 @@
-/.vscode
-.gitignore
-!Chess/Assets/
-!Chess/ProjectSettings/
+!.vscode
+!.gitignore
+!/Assets/
+!/ProjectSettings/
