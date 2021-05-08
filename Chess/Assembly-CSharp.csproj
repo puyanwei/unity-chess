@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\3dChess\PieceHover.cs" />
      <Compile Include="Assets\Scripts\3dChess\PawnAction.cs" />
      <Compile Include="Assets\Scripts\3dChess\GameObjectIdentifier.cs" />
      <Compile Include="Assets\Scripts\3dChess\PieceMovement.cs" />
