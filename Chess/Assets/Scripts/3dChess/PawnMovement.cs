@@ -29,8 +29,8 @@ public class PawnMovement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, piece.transform.position + allowedMovement);
+      //  Gizmos.color = Color.red;
+       // Gizmos.DrawRay(transform.position, piece.transform.position + allowedMovement);
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class PawnMovement : MonoBehaviour
            
             Physics.Raycast(pieceRay, out hit);
             cubeInFront = hit.transform.name;
-            Debug.Log(cubeInFront);
+// Debug.Log(cubeInFront);
 
 
 
